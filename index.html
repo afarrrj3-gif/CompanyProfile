@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JB Push Member Tool</title>
+
+<style>
+
+body{
+margin:0;
+font-family:sans-serif;
+background:linear-gradient(140deg,#0f172a,#020617);
+color:white;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+}
+
+.bg{
+position:absolute;
+width:200%;
+height:200%;
+background:radial-gradient(circle,#1e3a8a33,transparent);
+animation:bgmove 10s linear infinite;
+}
+
+@keyframes bgmove{
+0%{transform:rotate(0deg)}
+100%{transform:rotate(360deg)}
+}
+
+.container{
+
+position:relative;
+width:92%;
+max-width:520px;
+
+background:#020617ee;
+
+backdrop-filter:blur(20px);
+
+border-radius:16px;
+
+padding:20px;
+
+box-shadow:0 0 40px #2563eb55;
+
+animation:fade 1s ease;
+
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px)}
+to{opacity:1}
+}
+
+.title{
+font-size:20px;
+font-weight:bold;
+margin-bottom:10px;
+text-align:center;
+color:#60a5fa;
+}
+
+textarea{
+
+width:100%;
+height:260px;
+
+background:#020617;
+
+border:1px solid #1e293b;
+
+border-radius:10px;
+
+color:#00ffd5;
+
+padding:15px;
+
+resize:none;
+
+font-size:14px;
+
+}
+
+button{
+
+width:100%;
+
+margin-top:10px;
+
+padding:13px;
+
+border:none;
+
+border-radius:10px;
+
+background:#2563eb;
+
+color:white;
+
+font-size:15px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.03);
+
+box-shadow:0 0 15px #3b82f6;
+
+}
+
+.info{
+
+margin-top:8px;
+
+font-size:12px;
+
+opacity:.7;
+
+text-align:center;
+
+}
+
+.popup{
+
+position:fixed;
+
+bottom:40px;
+
+left:50%;
+
+transform:translateX(-50%) scale(0);
+
+background:#2563eb;
+
+padding:12px 25px;
+
+border-radius:10px;
+
+transition:.3s;
+
+}
+
+.popup.show{
+
+transform:translateX(-50%) scale(1);
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="container">
+
+<div class="title">JB PUSH MEMBER TOOL</div>
+
+<textarea id="text"></textarea>
+
+<button onclick="copyText()">COPY KOMEN</button>
+
+<div class="info">
+Auto random setiap 3 detik • Anti spam algoritma
+</div>
+
+</div>
+
+<div class="popup" id="popup">Copied ✔</div>
+
+<script>
+
+const salam=[
+
+"JOIN DONG LE",
+"GAS JOIN",
+"MASUK SINI",
+"BURUAN JOIN",
+"JOIN SEKARANG",
+"JOIN BRO",
+"MASUK GRUP JB",
+"JOIN MEMBER JB"
+
+]
+
+const pantun=[
+
+"UBUR UBUR IKAN LELE",
+"IKAN HIU MAKAN TOMAT",
+"BURUNG TERBANG KE LANGIT",
+"KUCING NAIK KE ATAP",
+"IKAN CUPANG DI KOLAM",
+"KURA KURA DI DALAM PERAHU",
+"BURUNG HANTU TERBANG MALAM",
+"IKAN LELE DI EMPANG"
+
+]
+
+const status=[
+
+"AMANAH",
+"FAST RESPON",
+"NO TIPU",
+"ADMIN ONLINE",
+"READY",
+"TRUSTED",
+"AMAN TERPERCAYA",
+"FAST DEAL"
+
+]
+
+const emoji=[
+
+"🔥","🚀","💎","⚡","👑","💥","🎯","🌟"
+
+]
+
+function rand(arr){
+
+return arr[Math.floor(Math.random()*arr.length)]
+
+}
+
+function generate(){
+
+let text=`
+
+THE KING ${rand(status)} ${rand(emoji)}
+
+بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيم
+
+${rand(pantun)}
+
+${rand(salam)} ${rand(emoji)}
+
+[ 1 ] GRUP BUYER SULTAN
+https://chat.whatsapp.com/E9wCodL7tWK47qMfvbDH51?mode=hqrc
+
+SALURAN ML
+https://whatsapp.com/channel/0029VbB5xTP3GJOzlxzCl20S
+
+SALURAN FF
+https://whatsapp.com/channel/0029Vb6TFJAFy72Jy6JIpv0m
+
+TIME : ${new Date().toLocaleTimeString()}
+
+`
+
+document.getElementById("text").value=text
+
+}
+
+setInterval(generate,3000)
+
+generate()
+
+function copyText(){
+
+let text=document.getElementById("text")
+
+text.select()
+
+document.execCommand("copy")
+
+let pop=document.getElementById("popup")
+
+pop.classList.add("show")
+
+setTimeout(()=>{
+
+pop.classList.remove("show")
+
+},1500)
+
+}
+
+</script>
+
+</body>
+</html>
