@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE APPAREL | Premium Fashion House</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-components.css">
+    <link rel="stylesheet" href="style-footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">LUXE</span>
+                <span class="logo-sub">APPAREL</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-nav" onclick="scrollToSection('contact')">Get In Touch</button>
+                <button class="menu-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-menu" onclick="toggleMenu()">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul>
+            <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#philosophy" onclick="toggleMenu()">Philosophy</a></li>
+            <li><a href="#gallery" onclick="toggleMenu()">Gallery</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <i class="fas fa-gem"></i>
+                    <span>Est. 2009</span>
+                </div>
+                <h1 class="hero-title">
+                    Crafting <span class="gradient-text">Timeless</span> Elegance
+                </h1>
+                <p class="hero-subtitle">
+                    A premium fashion house dedicated to creating sophisticated apparel 
+                    that embodies quality, artistry, and sustainable luxury.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#gallery" class="btn-primary">
+                        <span>View Collection</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#about" class="btn-secondary">
+                        <span>Our Story</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="https://res.cloudinary.com/dtdodhqqi/image/upload/v1773996666/62fe255ed090ad412a6fe2ad91ed63ea_qv2rwu.jpg" alt="LUXE APPAREL">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">About Us</span>
+                <h2 class="section-title">The Art of <span class="gradient-text">Fashion</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://res.cloudinary.com/dtdodhqqi/image/upload/v1773996637/81b64bdb41c75c4aa34024b81448b4d6_kefdtu.jpg" alt="Our Craft">
+                    <div class="experience-badge">
+                        <span class="exp-number">15</span>
+                        <span class="exp-text">Years of<br>Excellence</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h3>Where Tradition Meets Innovation</h3>
+                    <p>
+                        Founded in 2009, LUXE APPAREL began as a small atelier with a grand vision: 
+                        to redefine modern fashion through meticulous craftsmanship and timeless design.
+                    </p>
+                    <p>
+                        Today, we stand as a premier fashion house, creating apparel that transcends 
+                        trends and celebrates individuality. Each piece tells a story of dedication, 
+                        precision, and artistic passion.
+                    </p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="stat-value">50+</span>
+                            <span class="stat-label">Artisan Partners</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-value">12</span>
+                            <span class="stat-label">Countries</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-value">100%</span>
+                            <span class="stat-label">Sustainable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="philosophy">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Our Philosophy</span>
+                <h2 class="section-title">Pillars of <span class="gradient-text">Excellence</span></h2>
+            </div>
+            <div class="philosophy-grid">
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Premium Quality</h3>
+                    <p>We source only the finest materials from certified suppliers worldwide. Every thread, button, and fabric is chosen for its superior quality and durability.</p>
+                </div>
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainable Practice</h3>
+                    <p>Our commitment to the environment drives every decision. From eco-friendly materials to ethical production, we create fashion that respects our planet.</p>
+                </div>
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Timeless Design</h3>
+                    <p>We believe in creating pieces that outlast trends. Our designs blend classic elegance with contemporary sophistication for enduring style.</p>
+                </div>
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <h3>Artisan Craft</h3>
+                    <p>Every garment is crafted by skilled artisans who bring decades of expertise. Hand-finished details ensure uniqueness in every piece.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Our <span class="gradient-text">Collection</span></h2>
+                <p class="section-subtitle">A glimpse into our world of refined fashion</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="https://res.cloudinary.com/dtdodhqqi/image/upload/v1773996662/ad26decbfdad966e718498768da6a8fd_jrjuxt.jpg" alt="Collection 1">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Signature Series</span>
+                        <h3>The Executive Collection</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/dtdodhqqi/image/upload/v1773996604/2709b24d79718b78c5397258615a5b97_vhno5y.jpg" alt="Collection 2">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Casual Elegance</span>
+                        <h3>Weekend Essentials</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/dtdodhqqi/image/upload/v1773996757/1ebdd7c00e4c02dad4d07e2c0c4f1292_noml6e.jpg" alt="Collection 3">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Modern Classic</span>
+                        <h3>Urban Sophisticate</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/dtdodhqqi/image/upload/v1773996582/234d1243be19c784d03ccee018a2918f_lpovky.jpg" alt="Collection 4">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Refined Comfort</span>
+                        <h3>Premium Cotton Line</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/dtdodhqqi/image/upload/v1773996566/979df1dc90f7b4df9f2c83b4fe7139c4_c7yksh.jpg" alt="Collection 5">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Street Luxury</span>
+                        <h3>Contemporary Edge</h3>
+                    </div>
+                </div>
+                <div class="gallery-item wide">
+                    <img src="https://res.cloudinary.com/dtdodhqqi/image/upload/v1773996534/887ce53ea238615d4a0794619e5f92ed_ksbtsd.jpg" alt="Collection 6">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Sport Elegance</span>
+                        <h3>Athleisure Premium</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/dtdodhqqi/image/upload/v1773996506/ed77b80c760ca0b5c6aa88beac312b0b_z1nfut.jpg" alt="Collection 7">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Business Casual</span>
+                        <h3>Modern Professional</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/dtdodhqqi/image/upload/v1773996687/99d16c956c8ccabb1cff31a633ff8f92_o61qez.jpg" alt="Collection 8">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Limited Edition</span>
+                        <h3>Seasonal Exclusive</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Our Process</span>
+                <h2 class="section-title">From Concept to <span class="gradient-text">Creation</span></h2>
+            </div>
+            <div class="process-timeline">
+                <div class="timeline-line"></div>
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h4>Concept Design</h4>
+                        <p>Our creative team sketches initial concepts, blending market research with artistic vision.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h4>Material Selection</h4>
+                        <p>We source premium fabrics from certified suppliers, prioritizing quality and sustainability.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h4>Pattern Making</h4>
+                        <p>Expert pattern makers translate designs into precise templates for perfect fit.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h4>Artisan Production</h4>
+                        <p>Skilled craftsmen bring designs to life with meticulous attention to every detail.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <h4>Quality Assurance</h4>
+                        <p>Rigorous inspection ensures every piece meets our exacting standards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">Contact</span>
+                    <h2>Let's Create <span class="gradient-text">Together</span></h2>
+                    <p>Whether you're interested in partnership, collaboration, or simply want to learn more about our craft, we'd love to hear from you.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Headquarters</h4>
+                                <p>Jl. Fashion District No. 88<br>Jakarta Selatan, 12000<br>Indonesia</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>hello@luxeapparel.id</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+62 812-3456-7890</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="5" placeholder="Tell us about your inquiry..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-full">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-text">LUXE</span>
+                        <span class="logo-sub">APPAREL</span>
+                    </a>
+                    <p>Crafting timeless elegance since 2009. Premium fashion house dedicated to quality, sustainability, and artistic expression.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#philosophy">Our Philosophy</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Custom Design</a></li>
+                        <li><a href="#">Private Label</a></li>
+                        <li><a href="#">Corporate Partnership</a></li>
+                        <li><a href="#">Consultation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Sustainability Report</a></li>
+                        <li><a href="#">Lookbook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LUXE APPAREL. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
