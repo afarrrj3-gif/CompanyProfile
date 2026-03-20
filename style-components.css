@@ -1,0 +1,229 @@
+/* ===== PHILOSOPHY SECTION ===== */
+.philosophy {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%);
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.philosophy-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 24px;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 1px solid var(--gray-light);
+}
+
+.philosophy-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
+}
+
+.philosophy-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--white);
+    font-size: 2rem;
+    transition: transform 0.4s ease;
+}
+
+.philosophy-card:hover .philosophy-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.philosophy-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.philosophy-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* ===== GALLERY SECTION ===== */
+.gallery {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 300px;
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gallery-item.wide {
+    grid-column: span 2;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(30, 27, 75, 0.9) 0%, transparent 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-tag {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: var(--gradient);
+    color: var(--white);
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    width: fit-content;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.gallery-overlay h3 {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 700;
+    transform: translateY(20px);
+    transition: transform 0.4s ease 0.1s;
+}
+
+.gallery-item.large .gallery-overlay h3 {
+    font-size: 2rem;
+}
+
+.gallery-item:hover .gallery-tag,
+.gallery-item:hover .gallery-overlay h3 {
+    transform: translateY(0);
+}
+
+/* ===== PROCESS SECTION ===== */
+.process {
+    padding: 6rem 0;
+    background: var(--light);
+}
+
+.process-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 40px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--gray-light);
+}
+
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.process-step:last-child {
+    margin-bottom: 0;
+}
+
+.step-number {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    flex-shrink: 0;
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+    z-index: 1;
+}
+
+.step-content {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 20px;
+    flex: 1;
+    box-shadow: var(--shadow);
+    transition: all 0.4s ease;
+}
+
+.step-content:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.step-content h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.step-content p {
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+/* ===== REVEAL ANIMATION ===== */
+.reveal-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.reveal-element.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
